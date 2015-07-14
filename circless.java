@@ -1,6 +1,6 @@
 import java.util.*;
 public class circless {
-   public static double getArea(double r)
+   public static Float getArea(double r)
    {
 	   return Math.PI*r*r;
    }
