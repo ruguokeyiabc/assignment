@@ -35,30 +35,31 @@ public class Person {
 		for(int j=0;j<17;j++){
 			sum=sum+aa[j];
 		}
-		int s=sum%17;
-		int figure=0;
-		switch(s){
-		case 0:p[17]=String.valueOf('1');figure=1;
-		case 1:p[17]=String.valueOf('0');figure=1;
-		case 2:p[17]=String.valueOf('X');figure=1;
-		case 3:p[17]=String.valueOf('X');figure=1;
-		case 4:p[17]=String.valueOf('8');figure=1;
-		case 5:p[17]=String.valueOf('7');figure=1;
-		case 6:p[17]=String.valueOf('6');figure=1;
-		case 7:p[17]=String.valueOf('5');figure=1;
-		case 8:p[17]=String.valueOf('4');figure=1;
-		case 9:p[17]=String.valueOf('3');figure=1;
-		case 10:p[17]=String.valueOf('2');figure=1;
-		default:figure=-1;
-		}
-		if(figure==1){
+		int s=sum%11;
+		if(s==0||s==1||s==2||s==3||s==4||s==5||s==6||s==7||s==8||s==9||s==10)
+		{
+			switch(s){
+			case 0:p[17]=String.valueOf('1');
+			case 1:p[17]=String.valueOf('0');
+			case 2:p[17]=String.valueOf('X');
+			case 3:p[17]=String.valueOf('9');
+			case 4:p[17]=String.valueOf('8');
+			case 5:p[17]=String.valueOf('7');
+			case 6:p[17]=String.valueOf('6');
+			case 7:p[17]=String.valueOf('5');
+			case 8:p[17]=String.valueOf('4');
+			case 9:p[17]=String.valueOf('3');
+			case 10:p[17]=String.valueOf('2');
+			}
 			for(int k=0;k<p.length;k++)
 				System.out.print(p[k]);
-			System.out.println("该身份证合法！");
+				System.out.println("该身份证合法！");
+			
 		}
+
 		else {
 			System.out.printf("该身份证不合法！");
 		}
 	}
-}
 
+}
